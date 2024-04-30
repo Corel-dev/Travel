@@ -87,7 +87,7 @@ fun SignupScreen(navController: NavHostController) {
 
 @Composable
 @Preview(showBackground = true)
-fun SecondScreenPreview(){
+fun SignupScreenPreview(){
     EasyTTheme {
         SignupScreen(navController = rememberNavController())
     }

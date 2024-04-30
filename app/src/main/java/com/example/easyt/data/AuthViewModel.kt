@@ -6,7 +6,7 @@ import android.widget.Toast
 import androidx.navigation.NavHostController
 import com.example.easyt.models.User
 import com.example.easyt.navigation.DASH_URL
-import com.example.easyt.navigation.LOGIN_URL
+import com.example.easyt.navigation.LOG_IN_URL
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
 
@@ -32,7 +32,7 @@ class AuthViewModel(var navController: NavHostController, var context: Context) 
                 progress.dismiss()
                 if (it.isSuccessful){
                     Toast.makeText(this.context, "Success", Toast.LENGTH_SHORT).show()
-                    navController.navigate(LOGIN_URL)
+                    navController.navigate(LOG_IN_URL)
                 }else{
                     Toast.makeText(this.context, "Error", Toast.LENGTH_SHORT).show()
                 }
@@ -55,7 +55,7 @@ class AuthViewModel(var navController: NavHostController, var context: Context) 
 
     fun logout(){
         mAuth.signOut()
-        navController.navigate(LOGIN_URL)
+        navController.navigate(LOG_IN_URL)
     }
 
     fun isLoggedIn(): Boolean = mAuth.currentUser != null

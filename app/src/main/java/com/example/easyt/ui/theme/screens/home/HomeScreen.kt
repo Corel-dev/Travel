@@ -14,18 +14,14 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.paint
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.layout.ContentScale
-import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
-import com.example.easyt.R
-import com.example.easyt.navigation.SECONDSCREEN_URL
+import com.example.easyt.navigation.SECOND_SCREEN_URL
 import com.example.easyt.ui.theme.EasyTTheme
 
 @Composable
@@ -33,25 +29,24 @@ fun HomeScreen(navController: NavHostController) {
     Column(
         modifier = Modifier
             .fillMaxSize()
-            .paint(painterResource(id = R.drawable.img_4), contentScale = ContentScale.FillHeight)
     ) {
         Text(text = "Let's make",
             fontSize = 50.sp,
-            color = Color.White,
+            color = Color.Black,
             modifier = Modifier.padding(start = 13.dp, top = 70.dp))
         Text(text = "your dream",
             fontSize = 50.sp,
-            color = Color.White,
+            color = Color.Black,
             fontWeight = FontWeight.ExtraBold,
             modifier = Modifier.padding(start = 13.dp))
         Text(text = "vacation",
             fontSize = 50.sp,
-            color = Color.White,
+            color = Color.Black,
             fontWeight = FontWeight.ExtraBold,
             modifier = Modifier.padding(start = 13.dp))
         Row {
             Button(
-                onClick = {navController.navigate(SECONDSCREEN_URL)},
+                onClick = {navController.navigate(SECOND_SCREEN_URL)},
                 shape = RoundedCornerShape(20.dp),
                 colors = ButtonDefaults.buttonColors(Color.Red),
                 modifier = Modifier
